@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <string name="btn_login">Login</string>
+    <string name="lbl_login_heading">Login Now</string>
+    <string name="lbl_login_subhead">Please login to continue using app</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_email">Email</string>
+    <string name="login_signup_text">Don\'t have an account? Signup</string>
+    <string name="btn_signup">Signup</string>
+    <string name="lbl_signup_heading">Stay connected</string>
+    <string name="lbl_signup_subhead">Enter your email address and password \n to get access to your account</string>
+    <string name="signup_login_text">Already have an account? Login</string>
+</resources>
