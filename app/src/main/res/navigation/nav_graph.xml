@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.example.quizapp.ui.WelcomeFragment"
+        android:name="com.example.quizapp.ui.registration.WelcomeFragment"
         android:label="WelcomeFragment" >
         <action
-            android:id="@+id/action_welcomeFragment_to_signupFragment"
-            app:destination="@id/signupFragment"
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
             app:popUpTo="@id/welcomeFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.quizapp.ui.LoginFragment"
+        android:name="com.example.quizapp.ui.registration.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_signupFragment"
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupFragment"
-        android:name="com.example.quizapp.ui.SignupFragment"
+        android:name="com.example.quizapp.ui.registration.SignupFragment"
         android:label="SignupFragment" >
         <action
             android:id="@+id/action_signupFragment_to_loginFragment"
