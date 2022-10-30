@@ -4,8 +4,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import com.example.quizapp.data.router.RegistrationRouterImpl
-import com.example.quizapp.domain.router.RegistrationRouter
+import com.example.quizapp.data.router.QuizRouterImpl
+import com.example.quizapp.domain.router.QuizRouter
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -28,5 +28,5 @@ abstract class ActivityModule {
     }
 
     @Binds
-    abstract fun providesRouter(router: RegistrationRouterImpl): RegistrationRouter
+    abstract fun providesRouter(router: QuizRouterImpl): QuizRouter
 }

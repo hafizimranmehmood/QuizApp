@@ -17,4 +17,19 @@
     <color name="colorEditTextBg">#f2f5fa</color>
     <color name="colorEditTextBorder">#e9ebef</color>
     <color name="colorPrimaryButtonBg">#18206f</color>
+
+
+    <color name="color1">#3EB9DF</color>
+    <color name="color2">#3685BC</color>
+    <color name="color3">#D36280</color>
+    <color name="color4">#E44F55</color>
+    <color name="color5">#FA8056</color>
+    <color name="color6">#818BCA</color>
+    <color name="color7">#7D659F</color>
+    <color name="color8">#51BAB3</color>
+    <color name="color9">#4FB66C</color>
+    <color name="color10">#E3AD17</color>
+    <color name="color11">#627991</color>
+    <color name="color12">#EF8EAD</color>
+    <color name="color13">#B5BFC6</color>
 </resources>

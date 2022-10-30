@@ -1,4 +1,4 @@
-package com.example.quizapp.ui.registration
+package com.example.quizapp.ui.quiz
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import com.example.quizapp.databinding.WelcomeFragmentBinding
 import com.example.quizapp.domain.repository.QuizRepository
-import com.example.quizapp.domain.router.RegistrationRouter
-import com.example.quizapp.ui.registration.Screen.HomeScreen
-import com.example.quizapp.ui.registration.Screen.StartScreen
+import com.example.quizapp.domain.router.QuizRouter
+import com.example.quizapp.ui.quiz.Screen.*
+import com.example.quizapp.ui.quiz.Screen.Register.Welcome
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -21,7 +21,7 @@ class WelcomeFragment : Fragment() {
     @Inject
     lateinit var repository: QuizRepository
     @Inject
-    lateinit var registrationRouter: RegistrationRouter
+    lateinit var registrationRouter: QuizRouter
     private val viewModel by activityViewModels<SharedQuizViewModel>()
 
     override fun onCreateView(
@@ -32,7 +32,7 @@ class WelcomeFragment : Fragment() {
 
         binding = WelcomeFragmentBinding.inflate(inflater, container, false)
         if(viewModel.shouldNavigateToHome())
-            registrationRouter.navigateTo(HomeScreen)
+            registrationRouter.navigateTo(QuizScreen(Welcome))
         return binding.root
     }
 

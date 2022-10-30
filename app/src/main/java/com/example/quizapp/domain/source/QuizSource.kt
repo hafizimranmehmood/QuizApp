@@ -1,9 +1,10 @@
 package com.example.quizapp.domain.source
 
 import androidx.lifecycle.LiveData
+import com.example.quizapp.domain.model.Quiz
 import com.example.quizapp.domain.model.Response
 
-interface QuizRegistrationSource {
+interface QuizSource {
     fun validateSignUpInput(email: String, password: String, confirmPassword: String): Boolean
     fun validateSignInInput(email: String, password: String): Boolean
     fun createUserWithEmailAndPassword(email: String, password: String)
@@ -11,4 +12,6 @@ interface QuizRegistrationSource {
     fun signOut()
     fun isAlreadyLoggedIn(): Boolean
     fun observeRegistration(): LiveData<Response>
+    fun observeQuizzes(): LiveData<List<Quiz>>
+    fun loadQuizzes()
 }

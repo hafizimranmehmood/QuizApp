@@ -1,12 +1,13 @@
 package com.example.quizapp.data.repository
 
 import androidx.lifecycle.LiveData
+import com.example.quizapp.domain.model.Quiz
 import com.example.quizapp.domain.model.Response
 import com.example.quizapp.domain.repository.QuizRepository
-import com.example.quizapp.domain.source.QuizRegistrationSource
+import com.example.quizapp.domain.source.QuizSource
 import javax.inject.Inject
 
-class QuizRepositoryImpl @Inject constructor(private val source: QuizRegistrationSource) : QuizRepository {
+class QuizRepositoryImpl @Inject constructor(private val source: QuizSource) : QuizRepository {
 
     override fun validateSignUpInput(
         email: String,
@@ -26,4 +27,6 @@ class QuizRepositoryImpl @Inject constructor(private val source: QuizRegistratio
 
     override fun isAlreadyLoggedIn() = source.isAlreadyLoggedIn()
     override fun observeRegistration(): LiveData<Response> = source.observeRegistration()
+    override fun observeQuizzes(): LiveData<List<Quiz>> = source.observeQuizzes()
+    override fun loadQuizzes() = source.loadQuizzes()
 }

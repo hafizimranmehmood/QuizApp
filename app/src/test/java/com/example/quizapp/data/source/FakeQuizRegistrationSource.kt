@@ -1,11 +1,12 @@
 package com.example.quizapp.data.source
 
 import androidx.lifecycle.LiveData
+import com.example.quizapp.domain.model.Quiz
 import com.example.quizapp.domain.model.Response
-import com.example.quizapp.domain.source.QuizRegistrationSource
+import com.example.quizapp.domain.source.QuizSource
 import com.example.quizapp.util.Constants
 
-class FakeQuizRegistrationSource : QuizRegistrationSource {
+class FakeQuizRegistrationSource : QuizSource {
 
     private val existingUsers = listOf("username@abc.com")
 
@@ -36,11 +37,23 @@ class FakeQuizRegistrationSource : QuizRegistrationSource {
         TODO("Not yet implemented")
     }
 
+    override fun signOut() {
+        TODO("Not yet implemented")
+    }
+
     override fun isAlreadyLoggedIn(): Boolean {
         return false
     }
 
     override fun observeRegistration(): LiveData<Response> {
+        TODO("Not yet implemented")
+    }
+
+    override fun observeQuizzes(): LiveData<List<Quiz>> {
+        TODO("Not yet implemented")
+    }
+
+    override fun loadQuizzes() {
         TODO("Not yet implemented")
     }
 }
